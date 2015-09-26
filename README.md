@@ -4,6 +4,8 @@ Welcome to the 0x00-xmas-packager wiki!
 
 ### Why was xmas-Packager created?
 
+Can a person hide files inside of YouTube videos undetectably? Can YouTube serve as a secret file host? What would happen if it developed that YouTube could be used for this purpose?
+
 ### The Attack:
 
 SkyHigh Networks recently published information about a sophisticated attack where employees of an unnamed Fortune 500 company were sending out confidential data as YouTube videos. There wasn't anything special about these videos. The YouTube videos were not altered by the data in ways that were visually detectable. 
