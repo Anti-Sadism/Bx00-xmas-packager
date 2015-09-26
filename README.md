@@ -41,12 +41,12 @@ Really though, why? There's a fair amount of bit error and this is dealt with us
 
 Filesize: 16KB, JPEG Lena.jpg
 
-**File in first frame after YouTube's H.264 compression, no error code used.**
+**Recovered File in first frame after YouTube's H.264, no error code used.**
 ![](http://s24.postimg.org/vl6fn042d/final_result.jpg)
 
 Filesize: 16KB, JPEG, BER = 000.29% Lena.jpg
 
-**File in first frame hidden with error code r(50, 1) after YouTube encoding**
+**Recovered File in first frame hidden with error code r(50, 1) after YouTube**
 ![](http://s16.postimg.org/6myej8xjp/lena_image.jpg)
 
 Filesize 16KB, JPEG, BER = 0% Lena.jpg
@@ -103,3 +103,17 @@ doi: 10.1109/MWSCAS.2005.1594256
 2. (**checkers**) Alavianmehr, M.A.; Rezaei, M.; Helfroush, M.S.; Tashk, A., "A reversible data hiding scheme for video robust against H.264/AVC compression," in Information Security and Cryptology (ISCISC), 2013 10th International ISC Conference on , vol., no., pp.1-6, 29-30 Aug. 2013
 doi: 10.1109/ISCISC.2013.6767333
  keywords: {data compression;data encapsulation;image watermarking;video coding;wavelet transforms;AVC compression;H.264 compression;integer wavelet transform domain;lossless data hiding scheme;luminance component;multilevel histogram shifting mechanism;multilevel shifting mechanism;reversible data hiding scheme;secret data;uncompressed video data;video frame;watermarked image;Bit error rate;Histograms;Image coding;PSNR;Robustness;Video coding;Watermarking;H.264/AVC;data hiding;histogram shifting;lossless;multi-level;reversible;video watermarking},
+
+#TO-DO
+
+Add feature for (checkers) that allows for assume pepper, and feature to randomly decide salt or pepper when pixel difference is beyond 2T+G.
+
+Use secure keys to recover files, and have the program automatically generate one for you.
+
+Add support for strong encryption taking into account steganalysis detection.
+
+Add ffmpeg support built in to the program, so file conversions do not need to be done.
+
+Speed up the 2D DCT with a faster algorithm.
+
+Add support for calculating the PSNR and MSE.
