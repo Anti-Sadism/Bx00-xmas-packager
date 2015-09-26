@@ -93,7 +93,7 @@ With a minimalist style:
 
 1. (**checkers**) Using the spatial domain PVD algorithm
 
-2. (**smiling-face**) Using the dct 8-D vector quantization algorithm
+2. (**smiling-face**) Using the Discrete Cosine Transform 8-D vector quantization algorithm
 
 # Academic Papers
 1. (**smiling-face**) Ming Yang; Bourbakis, N., "A high bitrate information hiding algorithm for digital video content under H.264/AVC compression," in Circuits and Systems, 2005. 48th Midwest Symposium on , vol., no., pp.935-938 Vol. 2, 7-10 Aug. 2005
