@@ -14,13 +14,13 @@ Can a person hide files inside of YouTube videos undetectably? Can YouTube serve
 
 We're waiting for someone to come up with a "clean" detection strategy, but visual attacks are difficult for some algorithms, where for others, steganography is dead simple to spot, and the name of the algorithm is a joke about this. (checkers)
 
-### The Rumored AmerisourceBergen 2014 Attack:
+### The rumored AmerisourceBergen attack in 2014:
 
 **SkyHigh Networks** recently published information about a sophisticated attack where employees of a "certain" unnamed Fortune 500 company were sending out confidential data as YouTube videos. There wasn't anything special about these videos. Remember that the YouTube videos were not altered by the data in ways that were visually detectable?
 
 ![Attack](http://www.tripwire.com/state-of-security/wp-content/uploads/2014/11/videodata.png)
 
-In addition, the hidden data did not alter the file-size of the video. Discernibly, there was very little difference between the video and any other YouTube video, except of course, that these videos contained credit card information, source and binary code, names, passwords, and the like. 
+In addition, the hidden data did not alter the file-size of the video. Discernibly, there was very little difference between the video and any other YouTube video, except of course, that these videos may have contained **credit card information**, **health records** **source and binary computer code**, **names**, **ID**, **passwords**, and the like. 
 
 A personal source "somehow" familiar with the incident ;) emailed us that the attackers used **OpenPuff** but... it's known that OpenPuff's video steganography isn't robust enough against YouTube's encoding. Actually, there don't currently seem to be any programs reliably robust to it. Even those which attempt to be have bit error and the files aren't the same after encoding. **Guess the attackers must've written their own binaries?**
 
