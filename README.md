@@ -132,6 +132,8 @@ doi: 10.1109/ISCISC.2013.6767333
 
 Add feature for (checkers) that allows for assume pepper, and feature to randomly decide salt or pepper when pixel difference is beyond 2T+G.
 
+**Upload test videos to one of my YouTube accounts so that new users can sample the program**
+
 Use secure keys to recover files, and have the program automatically generate one for you.
 
 Add support for strong encryption taking into account steganalysis detection.
@@ -143,5 +145,7 @@ Speed up the 2D DCT with a faster algorithm.
 Add support for calculating the PSNR and MSE.
 
 **Use PSNR and BER to check if the data is reliably hidden before uploading to YouTube.**
+
+**Create a better detection utlity to detect steganography in videos (Of course, I want to break my own program!)**
 
 **Ability to specify the YouTube URL directly, without having to manually download anything and convert with ffmpeg**
