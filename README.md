@@ -2,6 +2,10 @@ Welcome to the 0x00-xmas-packager wiki!
 
 # Overview
 
+### What is xmas-Packager?
+
+Hide files inside fo YouTube videos. Create "two-sided" videos, where "one-side" has hidden videos and media or file content.
+
 ### Why was xmas-Packager created?
 
 Can a person hide files inside of YouTube videos undetectably? Can YouTube serve as a secret file host? What would happen if it developed that YouTube could be used for this purpose?
@@ -91,9 +95,9 @@ Needed work involves producing more algorithms and testing known ones against **
 
 With a minimalist style:
 
-1. (**checkers**) Using the spatial domain PVD algorithm
+1. (**checkers**) Using the spatial domain PVD algorithm [here](https://github.com/Anti-Government/0x00-xmas-packager/wiki/Algorithm:-(checkers))
 
-2. (**smiling-face**) Using the Discrete Cosine Transform 8-D vector quantization algorithm
+2. (**smiling-face**) Using the Discrete Cosine Transform 8-D vector quantization algorithm [here](https://github.com/Anti-Government/0x00-xmas-packager/wiki/Algorithm:-(smiling-face))
 
 # Academic Papers
 1. (**smiling-face**) Ming Yang; Bourbakis, N., "A high bitrate information hiding algorithm for digital video content under H.264/AVC compression," in Circuits and Systems, 2005. 48th Midwest Symposium on , vol., no., pp.935-938 Vol. 2, 7-10 Aug. 2005
