@@ -55,7 +55,7 @@ Filesize: 16KB, JPEG, BER = 000.29% Lena.jpg
 
 Filesize 16KB, JPEG, BER = 0% Lena.jpg
 
-**So using error correcting codes makes it lossless. Luckily, the same code will work for all file/video combinations.**
+**Using error correcting codes makes embedding lossless so the file will be the exact same before and after. Luckily, the same parameters will work for all file/video combinations and there is no data dependency. PLEASE DO NOT EXPERIMENT WITH PARAMETERS UNLESS YOU KNOW WHAT YOU ARE DOING, YOU CAN CREATE DANGEROUS FILES. If you "brick" your computer running a corrupted program, I hate to say but I am not responsible.**
 
 Follow the instructions below for using each algorithm and you'll be guaranteed to have no bit errors.
 
