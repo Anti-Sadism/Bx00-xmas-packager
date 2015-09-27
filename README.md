@@ -30,7 +30,7 @@ The attack was undetectable, that is, until the sysops noticed multiple uploads 
 
 **Why didn't they just steal data using their own removable media?** Some corporate networks do not allow employees to use removable media. In addition, firewalls that are watched by human operators, as well as activity logs make it difficult to send a great amount (MB, GB sized) data out.
 
-### The Staged (YES) Al-Qaeda Pornography Raid
+### The Fake Al-Qaeda Pornography Arrest
 
 ![Maktab al-Dawa](http://www.biyokulule.com/sawiro/sawirada_waaweyn/Internet%20Jihad5_1.jpg)
 
@@ -39,6 +39,10 @@ Compare this to the arrest made on an **Al-Qaeda operative** who was found to ha
 The operative was "suspected" (right) to identify with a named "Maktab al-Dawa", a moniker not DIRECTLY affiliated with Al-Qaeda but used to spread political messages. Still, people argue that the "unnamed" assailant was just a lone-wolf sympathizer. This isn't as likely as a more likely fraudulent political scarecrow would likely do something like this; legally backed by the local authorities and covered by a false identity of witness protection agency. I MEAN COME ON, the messages claimed that "Terrorists are tired of law enforcement agencies being better than them, terrorists are tired of being poor, and that they may give up on plotting altogether thanks to successful force protection operations." LOL why would anyone put this on a porn video and shove it in his underwear? Who the hell is he even delivering it to?
 
 Really, It's likely the guy was probably another *fed* trying to speak for the jihad jingoists and disappeared as soon as the arrest was made. I'm skeptical to this as well as many of the terrorist incidents in recent American media. Seems that there's a federal agency for talented actors, and you should really question the legitimacy of some of the more famous criminals and victims on the news. Most of these stories could be fabricated.
+
+### So why should I use it?
+
+Who knows?
 
 It goes to show you that even the most foolish of ideas can become powerful if your enemy does not consider them.
 
