@@ -30,11 +30,13 @@ The attack was undetectable, that is, until the sysops noticed multiple uploads 
 
 **Why didn't they just steal data using their own removable media?** Some corporate networks do not allow employees to use removable media. In addition, firewalls that are watched by human operators, as well as activity logs make it difficult to send a great amount (MB, GB sized) data out.
 
-### The Al-Qaeda Pornography Raid
+### The Awkward, Staged Al-Qaeda Pornography Raid
 
 ![Maktab al-Dawa](http://www.biyokulule.com/sawiro/sawirada_waaweyn/Internet%20Jihad5_1.jpg)
 
-Compare this to the arrest made on an **Al-Qaeda operative** who was found to have terrorist training manuals within  pornography videos in 2012. His method however, was less than sophisticated. It involved stuffing the TrueCrypt chunk within a forbidden zone of the video file, and altered the filesize of the video. Still, it is marvelous how much data was able to be fit within the file.
+Compare this to the arrest made on an **Al-Qaeda operative** who was found to have terrorist training manuals within  pornography videos in 2012. His method however, was less than sophisticated. It involved stuffing the TrueCrypt chunk within a forbidden zone of the video file, and altered the filesize of the video. Still, it is marvelous how much data was able to be fit within the file; megabyte/gigabyte.
+
+The operative was "suspected" (right) to identify with a named "Maktab al-Dawa", a moniker not DIRECTLY affiliated with Al-Qaeda but used to spread political messages. Still, people argue that the "unnamed" assailant was just a lone-wolf sympathizer. This isn't as likely as a more likely fraudulent political scarecrow would likely do something like this; legally backed by the local authorities and covered by a false identity of witness protection agency. It's likely the guy was probably a *fed* trying to speak for the jihad jingoists and disappeared as soon as the arrest was made. I'm skeptical to this as well as many of the terrorist incidents in recent American media.
 
 It goes to show you that even the most foolish of ideas can become powerful if your enemy does not consider them.
 
