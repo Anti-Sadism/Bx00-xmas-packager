@@ -143,3 +143,5 @@ Speed up the 2D DCT with a faster algorithm.
 Add support for calculating the PSNR and MSE.
 
 **Use PSNR and BER to check if the data is reliably hidden before uploading to YouTube.**
+
+**Ability to specify the YouTube URL directly, without having to manually download anything and convert with ffmpeg**
