@@ -117,3 +117,5 @@ Add ffmpeg support built in to the program, so file conversions do not need to b
 Speed up the 2D DCT with a faster algorithm.
 
 Add support for calculating the PSNR and MSE.
+
+**Use PSNR and BER to check if the data is reliably hidden before uploading to YouTube.**
