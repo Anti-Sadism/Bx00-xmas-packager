@@ -4,7 +4,7 @@ Welcome to the 0x00-xmas-packager wiki!
 
 ### What is xmas-Packager?
 
-Hide files inside fo YouTube videos. Create "two-sided" videos, where "one-side" has hidden videos and media or file content.
+Hide any file(s) inside of YouTube videos. Create "two-sided" videos, where "one-side" has hidden videos and media or file content.
 
 ### Why was xmas-Packager created?
 
