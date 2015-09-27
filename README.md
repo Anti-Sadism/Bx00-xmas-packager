@@ -10,17 +10,23 @@ Hide any file(s) inside of YouTube videos. Create "two-sided" videos, where "one
 
 Can a person hide files inside of YouTube videos undetectably? Can YouTube serve as a secret file host? What would happen if it developed that YouTube could be used for this purpose?
 
-### The Attack:
+### Is xmas-Packager detectable?
 
-SkyHigh Networks recently published information about a sophisticated attack where employees of an unnamed Fortune 500 company were sending out confidential data as YouTube videos. There wasn't anything special about these videos. The YouTube videos were not altered by the data in ways that were visually detectable. 
+Waiting for someone to come up with a "clean" detection strategy, but visual attacks are difficult.
 
-In addition, the hidden data did not alter the file-size of the video. Discernibly, there was very little difference between the video and any other YouTube video, except of course, that these videos contained credit card information, source and binary code, names, passwords, and the like.
+### The Infamous 2014 Attack:
+
+**SkyHigh Networks** recently published information about a sophisticated attack where employees of a "certain" unnamed Fortune 500 company were sending out confidential data as YouTube videos. There wasn't anything special about these videos. Remember that the YouTube videos were not altered by the data in ways that were visually detectable?
+
+In addition, the hidden data did not alter the file-size of the video. Discernibly, there was very little difference between the video and any other YouTube video, except of course, that these videos contained credit card information, source and binary code, names, passwords, and the like. A personal source "somehow" familiar with the incident ;) emailed us that the attackers used **OpenPuff** but... it's known that OpenPuff's video steganography isn't robust enough against YouTube's encoding. Actually, there don't currently seem to be any programs reliably robust to it. Even those which attempt to be have bit error and the files aren't the same after encoding. **Guess the attackers must've written their own binaries?**
 
 **Forensic steganography** is something that few actually study. See, it involves hiding data inside of other data, in ways that don't arouse suspicion. It's a very sophisticated science and is separate from Cryptography for its own reasons. Knowing how to use it however, can probably help you someday soon.
 
 The attack was undetectable, that is, until the sysops noticed multiple uploads of the same video (The attackers weren't very creative even with such a sophisticated tool, and decided to use the same video to their downfall)
 
 **Why didn't they just steal data using their own removable media?** Some corporate networks do not allow employees to use removable media. In addition, firewalls that are watched by human operators, as well as activity logs make it difficult to send a great amount (MB, GB sized) data out.
+
+### The Al-Qaeda Pornography Raid
 
 Compare this to the arrest made on an **Al-Qaeda operative** who was found to have terrorist training manuals within a pornography video in 2012. His method however, was less than sophisticated. It involved stuffing the TrueCrypt chunk within a forbidden zone of the video file, and altered the filesize of the video. Still, it is marvelous how much data was able to be fit within the file.
 
