@@ -157,3 +157,5 @@ Add support for calculating the PSNR and MSE.
 **Create a better detection utlity to detect steganography in videos (Of course, I want to break my own program!)**
 
 **Ability to specify the YouTube URL directly, without having to manually download anything and convert with ffmpeg**
+
+Integrate it with live webcam feed. To do so, devise a computationally efficient algorithm. The DCT is slow.
