@@ -20,6 +20,10 @@ YES, but not cleanly. They need to guess the parameters. General attacks, such a
 
 We're waiting for someone to come up with a "clean" detection strategy, but visual attacks are difficult for some algorithms, where for others, steganography is dead simple to spot, and the name of the algorithm is a joke about this. (checkers) A current area of focus is to devise more invisible algorithms which show high robustness. One future idea is to use the Discrete Chirplet transform- it shows promise for this; with its superior robustness that is nearly antifragile to some image compression operations.
 
+### What kind of files can I hide?
+
+You can hide any kind of file from images to executable code. 3GP video works best for video within video applications, .OGG files work nicely for music, and .RAR files work just dandy for photo albums, and collections of dissimilar file types. Of course, I'm just giving you suggestions on how to reduce the filesize.
+
 ### The rumored AmerisourceBergen attack in 2014:
 
 **SkyHigh Networks** recently published information about a sophisticated attack where employees of a "certain" unnamed Fortune 500 company were sending out confidential data as YouTube videos. There wasn't anything special about these videos. Remember that the YouTube videos were not altered by the data in ways that were visually detectable?
