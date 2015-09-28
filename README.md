@@ -10,13 +10,15 @@ Hide any file(s) inside of YouTube videos. Create "two-sided" videos, where "one
 
 Can a person hide files inside of YouTube videos undetectably? Can YouTube serve as a secret file host? What would happen if it developed that YouTube could be used for this purpose? Steganography is almost pointless if I can only hide text. What if I could hide videos, within videos? A photo collection? Large rar files and EXE's? Anything?
 
-If I access a video with illicit content, without knowing, am I guilty of anything? What if it is possible to share illicit content in YouTube videos? Can we detect this?
+If I download an innocent seeming video teeming with hidden illicit content, without knowing what's there, am I legally guilty of anything? What if it is possible to share illicit content in YouTube videos? Can we detect this?
 
 ### Are the files hidden in the YouTube videos discoverable?
 
 I really want to say yes, actually.
 
-BUT, no. We're waiting for someone to come up with a "clean" detection strategy, but visual attacks are difficult for some algorithms, where for others, steganography is dead simple to spot, and the name of the algorithm is a joke about this. (checkers)
+YES, but not cleanly. They need to guess the parameters. General attacks, such as the chi-squared attack may work, but YouTube's compression reduces detection because the forenic analyzer needs to guess which error correcting code you're using.
+
+We're waiting for someone to come up with a "clean" detection strategy, but visual attacks are difficult for some algorithms, where for others, steganography is dead simple to spot, and the name of the algorithm is a joke about this. (checkers) A current area of focus is to devise more invisible algorithms which show high robustness. One future idea is to use the Discrete Chirplet transform- it shows promise for this; with its superior robustness that is nearly antifragile to some image compression operations.
 
 ### The rumored AmerisourceBergen attack in 2014:
 
