@@ -391,6 +391,7 @@ namespace H264Stego
             for (; ; pos++)
             {
 
+                if (pos == bytes.Length && loop == true) return b;
                 if (pos == bytes.Length) pos = 0;
 
 
@@ -459,7 +460,7 @@ namespace H264Stego
 
             for (; ; pos++)
             {
-
+                if (pos == bytes.Length && loop == true) return b;
                 if (pos == bytes.Length) pos = 0;
 
                 for (pos_bit = 0; pos_bit < 8; pos_bit++)
@@ -516,7 +517,9 @@ namespace H264Stego
 
             for (; ; pos++)
             {
-                if (pos == bytes.Length) pos = 0;
+                if (pos == bytes.Length && loop == true) return bytes;
+                if (pos == bytes.Length && loop == false) pos = 0;
+
 
                 for (pos_bit = 0; pos_bit < 8; pos_bit++)
                 {
@@ -575,6 +578,7 @@ namespace H264Stego
 
             for (; ; pos++)
             {
+                if (pos == bytes.Length && loop == true) return bytes;
                 if (pos == bytes.Length) pos = 0;
 
                 for (pos_bit = 0; pos_bit < 8; pos_bit++)
