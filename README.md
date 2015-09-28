@@ -2,19 +2,21 @@ Welcome to the 0x00-xmas-packager wiki!
 
 # Overview
 
-See the quick start guide: ![HERE](https://github.com/Anti-Government/0x00-xmas-packager/wiki/Quick-Start)
-
 ### What is xmas-Packager?
 
 Hide any file(s) inside of YouTube videos. Create "two-sided" videos, where "one-side" has hidden videos and media or file content.
 
 ### Why was xmas-Packager created?
 
-Can a person hide files inside of YouTube videos undetectably? Can YouTube serve as a secret file host? What would happen if it developed that YouTube could be used for this purpose?
+Can a person hide files inside of YouTube videos undetectably? Can YouTube serve as a secret file host? What would happen if it developed that YouTube could be used for this purpose? Steganography is almost pointless if I can only hide text. What if I could hide videos, within videos? A photo collection? Large rar files and EXE's? Anything?
 
-### Is xmas-Packager detectable?
+If I access a video with illicit content, without knowing, am I guilty of anything? What if it is possible to share illicit content in YouTube videos? Can we detect this?
 
-We're waiting for someone to come up with a "clean" detection strategy, but visual attacks are difficult for some algorithms, where for others, steganography is dead simple to spot, and the name of the algorithm is a joke about this. (checkers)
+### Are the files hidden in the YouTube videos discoverable?
+
+I really want to say yes, actually.
+
+BUT, no. We're waiting for someone to come up with a "clean" detection strategy, but visual attacks are difficult for some algorithms, where for others, steganography is dead simple to spot, and the name of the algorithm is a joke about this. (checkers)
 
 ### The rumored AmerisourceBergen attack in 2014:
 
@@ -116,6 +118,8 @@ Needed work involves producing more algorithms and testing known ones against **
 # Getting Started 
 
 With a minimalist style:
+
+QUICKSTART: https://github.com/Anti-Government/0x00-xmas-packager/wiki/Quick-Start
 
 1. (**checkers**) Using the spatial domain PVD algorithm [here](https://github.com/Anti-Government/0x00-xmas-packager/wiki/Algorithm:-(checkers))
 
