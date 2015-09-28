@@ -2,7 +2,7 @@ Welcome to the 0x00-xmas-packager wiki!
 
 # Overview
 
-See the quick start guide: ![here}(https://github.com/Anti-Government/0x00-xmas-packager/wiki/Quick-Start)
+See the quick start guide: ![HERE](https://github.com/Anti-Government/0x00-xmas-packager/wiki/Quick-Start)
 
 ### What is xmas-Packager?
 
