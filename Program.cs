@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,6 +18,12 @@ namespace H264Stego
 {
     class Program
     {
+        static long filesizespecified;
+        static bool loop = true;
+        static long pos;
+        static long pos_bit;
+        static long pos_rep;
+
         public class Frequency_4x4
         {
             public double[,] frequencies;
@@ -372,55 +378,62 @@ namespace H264Stego
             double gamma_prime = Gamma_Prime(block, T, G);
             int[,] sgn = matrix_SGN(block);
 
+            if (loop) pos = 0;
+
+            if (loop) pos_bit = 0;
+
+            if (loop) pos_rep = 0;
+
             Bitmap src = new Bitmap(block_size, block_size);
             int x = 0;
             int y = 0;
 
-            for (int i = 0; i < bytes.Length; i++)
+            for (; ; pos++)
             {
-               
-                    
-                
-                for (int k = 0; k < 8; k++)
+
+                if (pos == bytes.Length) pos = 0;
+
+
+                for (pos_bit = 0; pos_bit < 8; pos_bit++)
                 {
                     //int y = (block_size * (((8 *  i) + (  k))) / b.Width );
                     //int x = (block_size * (((8 *  i) + (  k))) % b.Width );
 
-                    
-                    
-                    
-                    for ( int l = 0; l < rep; l++)  
+
+
+
+                    for (pos_rep = 0; pos_rep < rep; pos_rep++)
                     {
-                    src = b.Clone(new Rectangle(x, y, block_size, block_size), b.PixelFormat);
-                    block = Array2DFromBitmap(src);
-                    byte bit = (byte)((bytes[i] >> k) % 2);
-                    int alpha = arithmetic_Difference(block, sgn);
-                    block = arithmetic_Threshold(block, alpha, gamma, T);
+                        src = b.Clone(new Rectangle(x, y, block_size, block_size), b.PixelFormat);
+                        block = Array2DFromBitmap(src);
+                        byte bit = (byte)((bytes[pos] >> (byte)pos_bit) % 2);
+                        int alpha = arithmetic_Difference(block, sgn);
+                        block = arithmetic_Threshold(block, alpha, gamma, T);
 
-                    alpha = arithmetic_Difference(block, sgn);//See below
+                        alpha = arithmetic_Difference(block, sgn);//See below
 
-                    if (alpha >= -T && alpha <= T) //Thank you Alavianamehr! for leaving important details out after plagiari- "paraphrasing" Xian
-                        block = arithmetic_Embed(bit, alpha, block, gamma_prime, T);
-                    if (alpha > T && alpha < -T)
-                        k--;
+                        if (alpha >= -T && alpha <= T) //Thank you Alavianamehr! for leaving important details out after plagiari- "paraphrasing" Xian
+                            block = arithmetic_Embed(bit, alpha, block, gamma_prime, T);
+                        if (alpha > T && alpha < -T)
+                            pos_bit--;
 
-                    src = BitmapFromArray2D(block);
+                        src = BitmapFromArray2D(block);
 
-                    //g.DrawImage(src, x, y, new Rectangle(0, 0, block_size, block_size), GraphicsUnit.Pixel);
-                    for (int m = 0; m < block_size; m++)
-                        for (int n = 0; n < block_size; n++)
-                            b.SetPixel(x+n, y+m, src.GetPixel(n, m));
-                    //src.Dispose();
+                        //g.DrawImage(src, x, y, new Rectangle(0, 0, block_size, block_size), GraphicsUnit.Pixel);
+                        for (int m = 0; m < block_size; m++)
+                            for (int n = 0; n < block_size; n++)
+                                b.SetPixel(x + n, y + m, src.GetPixel(n, m));
+                        //src.Dispose();
 
-                    x += block_size;
-                    if (x >= b.Width) { y += block_size; x = 0; }
-                    if (y >= b.Height) return b;
+                        x += block_size;
+                        if (x >= b.Width) { y += block_size; x = 0; }
+                        if (y >= b.Height) return b;
 
                     }
 
                 }
             }
-            return b;
+            //return b;
         }
 
         /// <summary>
@@ -438,18 +451,24 @@ namespace H264Stego
             int x = 0;
             int y = 0;
 
-            for (int i = 0; i < bytes.Length; i++)
+            if (loop) pos = 0;
+
+            if (loop) pos_bit = 0;
+
+            if (loop) pos_rep = 0;
+
+            for (; ; pos++)
             {
 
+                if (pos == bytes.Length) pos = 0;
 
-
-                for (int k = 0; k < 8; k++)
+                for (pos_bit = 0; pos_bit < 8; pos_bit++)
                 {
-                    for (int l = 0; l < rep; l++)
+                    for (pos_rep = 0; pos_rep < rep; pos_rep++)
                     {
                         src = b.Clone(new Rectangle(x, y, block_size, block_size), b.PixelFormat);
                         f = DCT2D_4x4(src);
-                        byte bit = (byte)((bytes[i] >> k) % 2);
+                        byte bit = (byte)((bytes[pos] >> (byte)(pos_bit)) % 2);
                         f = vector_Embed8D(f, T, bit);
            
                         src = iDCT2D_4x4(f);
@@ -467,7 +486,7 @@ namespace H264Stego
                     }
                 }
             }
-            return b;
+            //return b;
         }
 
         /// <summary>
@@ -487,13 +506,21 @@ namespace H264Stego
             byte bit = 0;
             byte avg = 0;
 
+            if (loop) pos = 0;
+
+            if (loop) pos_bit = 0;
+
+            if (loop) pos_rep = 0;
+
             byte[] newbytes = new byte[bytes.Length];
 
-            for (int i = 0; i < bytes.Length; i++)
+            for (; ; pos++)
             {
-                for (int k = 0; k < 8; k++)
+                if (pos == bytes.Length) pos = 0;
+
+                for (pos_bit = 0; pos_bit < 8; pos_bit++)
                 {
-                    for (int l = 0; l < rep; l++)
+                    for (pos_rep = 0; pos_rep < rep; pos_rep++)
                     {
                         src = b.Clone(new Rectangle(x, y, block_size, block_size), b.PixelFormat);
                         block = Array2DFromBitmap(src);
@@ -513,12 +540,12 @@ namespace H264Stego
                             return newbytes;
                     }
                     bit = (byte)Math.Round((double)avg / (double)rep);
-                    newbytes[i] = (byte)(newbytes[i] >> 1);
-                    newbytes[i] += (byte)(128 * bit);
+                    newbytes[pos] = (byte)(newbytes[pos] >> 1);
+                    newbytes[pos] += (byte)(128 * bit);
                     avg = 0;
                 }
             }
-            return newbytes;
+            //return newbytes;
         }
 
 
@@ -532,6 +559,11 @@ namespace H264Stego
         {
             double[,] block = new double[4, 4];
 
+            if (loop) pos = 0;
+
+            if (loop) pos_bit = 0;
+
+            if (loop) pos_rep = 0;
 
             Bitmap src = new Bitmap(4, 4);
             int x = 0;
@@ -541,11 +573,13 @@ namespace H264Stego
             Frequency_4x4 f = new Frequency_4x4();
             byte[] newbytes = new byte[bytes.Length];
 
-            for (int i = 0; i < bytes.Length; i++)
+            for (; ; pos++)
             {
-                for (int k = 0; k < 8; k++)
+                if (pos == bytes.Length) pos = 0;
+
+                for (pos_bit = 0; pos_bit < 8; pos_bit++)
                 {
-                    for (int l = 0; l < rep; l++)
+                    for (pos_rep = 0; pos_rep < rep; pos_rep++)
                     {
                         src = b.Clone(new Rectangle(x, y, 4, 4), b.PixelFormat);
                         f = DCT2D_4x4(src);
@@ -566,12 +600,12 @@ namespace H264Stego
                             return newbytes;
                     }
                     bit = (byte)Math.Round((double)avg / (double)rep);
-                    newbytes[i] = (byte)(newbytes[i] >> 1);
-                    newbytes[i] += (byte)(128 * bit);
+                    newbytes[pos] = (byte)(newbytes[pos] >> 1);
+                    newbytes[pos] += (byte)(128 * bit);
                     avg = 0;
                 }
             }
-            return newbytes;
+            //return newbytes;
         }
 
 
@@ -758,6 +792,8 @@ namespace H264Stego
                 {
                     Console.WriteLine("Enter the filename to save the reconstructed file to");
                     savefilename = Console.ReadLine();
+                    Console.WriteLine("What is the filesize of the file in bytes? If unknown, type 42");
+                    filesizespecified = long.Parse(Console.ReadLine());
                 }
 
                 Console.WriteLine("What algorithm will you use? <Choose Number> \n \n \n 1. (checkers): Spatial Domain PVD - Very Robust, uses computationally efficient Pixel Value Differencing and Histogram Shifting algorithms. Easily detectable visually however. Payload capacity is large. Reccomended if video is being uploaded to YouTube or highly compressed on disk. Not recommended for covert operation and is weak to known steganalysis attacks.");
@@ -777,7 +813,10 @@ namespace H264Stego
                             Console.WriteLine(" * File is much larger than embedding capacity of frame with chosen error code, would you like to embed it across all frames? <Y/n>");
                             string allframes = Console.ReadLine();
                             if (allframes != "Y")
+                            {
                                 Console.WriteLine("File too large, aborting...");
+                                loop = false;
+                            }
                         }
                         Frequency_4x4 f = new Frequency_4x4();
                         
@@ -799,6 +838,14 @@ namespace H264Stego
                             }
                             if (hiding == "R")
                             {
+                                if (filesizespecified == 42)
+                                {
+                                    if (bytes.Length * rep >= (videoWidth * videoHeight / 8 / 16))
+                                        loop = false;
+
+                                    filesizespecified = bytes.Length;
+                                }
+
                                 Console.Write("\n Processing.." + i / frameLength + "% Done \n");
 
                                 videoData = GetBytesFromFile(filename, (((videoWidth * videoHeight) * i) + (((videoWidth * videoHeight) * i) / 2)), videoWidth * videoHeight);
@@ -822,7 +869,7 @@ namespace H264Stego
                         Console.WriteLine("What is the error correcting codeword length you'll use? (Set this to 50 or greater for YouTube.)");
                         int rep = Int32.Parse(Console.ReadLine());
                         bytes = GetBytesFromFile(sfilename, 0);
-                        if (bytes.Length * 8 * rep> videoWidth * videoHeight / block_size / block_size)
+                        if (bytes.Length * 8 * rep > videoWidth * videoHeight / block_size / block_size)
                         {
                             Console.WriteLine(" * File is much larger than embedding capacity of frame with chosen error code, would you like to embed it across all frames? <Y/n>");
                             string allframes = Console.ReadLine();
@@ -847,6 +894,14 @@ namespace H264Stego
                             }
                             if (hiding == "R")
                             {
+                                if (filesizespecified == 42)
+                                {
+                                    if (bytes.Length * rep >= (videoWidth * videoHeight /8 /block_size /block_size))
+                                    loop = false;
+
+                                    filesizespecified = bytes.Length;
+                                }
+
                                 Console.Write("\n Processing.." + i / frameLength + "% Done");
 
                                 videoData = GetBytesFromFile(filename, (((videoWidth * videoHeight) * i) + (((videoWidth * videoHeight) * i) / 2)), videoWidth * videoHeight);
