@@ -2,6 +2,8 @@ Welcome to the 0x00-xmas-packager wiki!
 
 # Overview
 
+See the quick start guide: ![here}(https://github.com/Anti-Government/0x00-xmas-packager/wiki/Quick-Start)
+
 ### What is xmas-Packager?
 
 Hide any file(s) inside of YouTube videos. Create "two-sided" videos, where "one-side" has hidden videos and media or file content.
