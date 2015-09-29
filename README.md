@@ -163,3 +163,13 @@ Add support for calculating the PSNR and MSE.
 **Ability to specify the YouTube URL directly, without having to manually download anything and convert with ffmpeg**
 
 Integrate it with live webcam feed. To do so, devise a computationally efficient algorithm. The DCT is slow.
+
+# Other Ideas
+
+Use the Discrete Chirplet Transform for the video embedding. It has shown to have supreme robustness over the DCT and is antifragile to blur and rotate operations.
+
+Add a seeker which can seek a video that has data hidden in it. Allow the user only to embed within certain sections of the video, rather than the whole slice.
+
+Add audio steganography 
+
+Allow combinations of algorithms to be performed at once. Some work well with others.
