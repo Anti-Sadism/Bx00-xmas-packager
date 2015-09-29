@@ -173,3 +173,5 @@ Add a seeker which can seek a video that has data hidden in it. Allow the user o
 Add audio steganography 
 
 Allow combinations of algorithms to be performed at once. Some work well with others.
+
+Allow the setting of BCH Syndrome Code and Hamming/CRC code instead of Repetition Error correcting code
