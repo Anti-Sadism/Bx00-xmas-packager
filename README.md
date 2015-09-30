@@ -174,4 +174,4 @@ Add audio steganography
 
 Allow combinations of algorithms to be performed at once. Some work well with others.
 
-Allow the setting of BCH Syndrome Code and Hamming/CRC code instead of Repetition Error correcting code
+Allow the setting of BCH Syndrome Code and Hamming/CRC code instead of Repetition Error correcting code which would allow for greater payload per codeword length
