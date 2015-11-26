@@ -2,23 +2,9 @@ Welcome to the 0x00-xmas-packager wiki!
 
 # Overview
 
-### What is xmas-Packager?
-
-Hide any file(s) inside of YouTube videos. Create "two-sided" videos, where "one-side" has hidden videos and media or file content.
-
-### Why was xmas-Packager created?
-
 Can a person hide files inside of YouTube videos undetectably? Can YouTube serve as a secret file host? What would happen if it developed that YouTube could be used for this purpose? Steganography is almost pointless if I can only hide text. What if I could hide videos, within videos? A photo collection? Large rar files and EXE's? Anything?
 
 If I download an innocent seeming video teeming with hidden illicit content, without knowing what's there, am I legally guilty of anything? What if it is possible to share illicit content in YouTube videos? Can we detect this?
-
-### Are the files hidden in the YouTube videos discoverable?
-
-I really want to say yes, actually.
-
-YES, but not cleanly. They need to guess the parameters. General attacks, such as the chi-squared attack may work, but YouTube's compression reduces detection because the forenic analyzer needs to guess which error correcting code you're using.
-
-We're waiting for someone to come up with a "clean" detection strategy, but visual attacks are difficult for some algorithms, where for others, steganography is dead simple to spot, and the name of the algorithm is a joke about this. (checkers) A current area of focus is to devise more invisible algorithms which show high robustness. One future idea is to use the Discrete Chirplet transform- it shows promise for this; with its superior robustness that is nearly antifragile to some image compression operations.
 
 ### What kind of files can I hide?
 
@@ -28,47 +14,6 @@ You can hide any kind of file from images to executable code. 3GP video works be
 
 **SkyHigh Networks** recently published information about a sophisticated attack where employees of a "certain" unnamed Fortune 500 company were sending out confidential data as YouTube videos. There wasn't anything special about these videos. Remember that the YouTube videos were not altered by the data in ways that were visually detectable?
 
-![Attack](http://www.tripwire.com/state-of-security/wp-content/uploads/2014/11/videodata.png)
-
-In addition, the hidden data did not alter the file-size of the video. Discernibly, there was very little difference between the video and any other YouTube video, except of course, that these videos may have contained **credit card information**, **health records** **source and binary computer code**, **names**, **ID**, **passwords**, and the like. 
-
-A personal source "somehow" familiar with the incident ;) emailed us that the attackers used **OpenPuff** but... it's known that OpenPuff's video steganography isn't robust enough against YouTube's encoding. Actually, there don't currently seem to be any programs reliably robust to it. Even those which attempt to be have bit error and the files aren't the same after encoding. **Guess the attackers must've written their own binaries?**
-
-**Forensic steganography** is something that few actually study. See, it involves hiding data inside of other data, in ways that don't arouse suspicion. It's a very sophisticated science and is separate from Cryptography for its own reasons. Knowing how to use it however, can probably help you someday soon.
-
-The attack was undetectable, that is, until the sysops noticed multiple uploads of the same video (The attackers weren't very creative even with such a sophisticated tool, and decided to use the same video to their downfall)
-
-**Why didn't they just steal data using their own removable media?** Some corporate networks do not allow employees to use removable media. In addition, firewalls that are watched by human operators, as well as activity logs make it difficult to send a great amount (MB, GB sized) data out.
-
-### The Fake Al-Qaeda Pornography Arrest
-
-![Maktab al-Dawa](http://www.biyokulule.com/sawiro/sawirada_waaweyn/Internet%20Jihad5_1.jpg)
-
-Compare this to the arrest made on an **Al-Qaeda operative** who was found to have terrorist training manuals within  pornography videos in 2012. His method however, was less than sophisticated. It involved stuffing the TrueCrypt chunk within a forbidden zone of the video file, and altered the filesize of the video. Still, it is marvelous how much data was able to be fit within the file; megabyte/gigabyte.
-
-The operative was "suspected" (right) to identify with a named "Maktab al-Dawa", a moniker not DIRECTLY affiliated with Al-Qaeda but used to spread political messages. Still, people argue that the "unnamed" assailant was just a lone-wolf sympathizer. This isn't as likely as a more likely fraudulent political scarecrow would likely do something like this; legally backed by the local authorities and covered by a false identity of witness protection agency. I MEAN COME ON, the messages claimed that "Terrorists are tired of law enforcement agencies being better than them, terrorists are tired of being poor, and that they may give up on plotting altogether thanks to successful force protection operations." LOL why would anyone put this on a porn video and shove it in his underwear? Who the hell is he even delivering it to?
-
-Really, It's likely the guy was probably another *fed* trying to speak for the jihad jingoists and disappeared as soon as the arrest was made. I'm skeptical to this as well as many of the terrorist incidents in recent American media. Seems that there's a federal agency for talented actors, and you should really question the legitimacy of some of the more famous criminals and victims on the news. Most of these stories could be fabricated.
-
-### So why should I use it?
-
-Who knows?
-
-It goes to show you that even the most foolish of ideas can become powerful if your enemy does not consider them.
-
-B1N@RY and his student wrote a paper titled UYR, where they demonstrate one possibility of such a powerful attack. Their attack uses LUT's and doesn't actually hide the data inside of the video. XMAS-Packager hopes to take this to the extreme where all that is needed is a single 32 bit length key and very large files can be hosted and downloaded from YouTube, even after re-encoding. It combines digital image processing with forensic steganography.
-
-One can take advantage of this to share files without needing strong encryption provided by anonymizing services like Tor. The hiding capacity of video is fairly large. **All the feds will see, as well as your ISP, and anyone else, is legitimate viewing and sharing of YouTube videos. If you choose to just keep it on your disk, even better, you won't need to use error correction and can invisibly hide even more.** So have fun hiding your programs, pictures, and videos, folks.
-
-So forensic steganography isn't new. Sure, there ARE programs that can do it. However, XMAS-packager is one of few video steganography programs, designed for YouTube and specifically online video websites, which can reliably use the same parameters and encode data losslessly for any video. It is not data dependent and you won't need to fool around with parameters constantly just to get something sorta-working.
-
-XMAS-Packager uses many algorithms. But all algorithms must at least 1.) Have >30db distortion min 2.) Not alter the filesize 3.)Be antifragile, robust, or at least marginally so. If you invent any of your own, feel free to contribute.
-
-### This Program is Dangerous to Use!
-
-Really though, why? There's a fair amount of bit error and this is dealt with using error correcting codes. But a single bit error in a fatal program could possibly cause erratic and unpredictable behavior for a program. **PLEASE, Take care to only run programs to which the total BER (Bit Error Rate) is 0. Only run programs from trusted sources.** Don't worry though, if you follow the instructions here, you shouldn't have a single bit error to deal with.
-
-### Watch what I mean, Let's hide a single JPEG within the first video frame.
 
 **Original file only hidden in the first frame of a 10 second 300 frame video**
 ![Lena Original](http://s18.postimg.org/9y7xy1fh5/lena.jpg)
@@ -82,12 +27,6 @@ Filesize: 16KB, JPEG, BER = 000.29% Lena.jpg
 
 **Recovered File in first frame hidden with error code r(50, 1) after YouTube**
 ![](http://s16.postimg.org/6myej8xjp/lena_image.jpg)
-
-Filesize 16KB, JPEG, BER = 0% Lena.jpg
-
-**Using error correcting codes makes embedding lossless so the file will be the exact same before and after. Luckily, the same parameters will work for all file/video combinations and there is no data dependency. PLEASE DO NOT EXPERIMENT WITH PARAMETERS UNLESS YOU KNOW WHAT YOU ARE DOING, YOU CAN CREATE DANGEROUS FILES. If you "brick" your computer running a corrupted program, I hate to say but I am not responsible.**
-
-Follow the instructions below for using each algorithm and you'll be guaranteed to have no bit errors.
 
 # Some Forensic Steganography BG:
 
